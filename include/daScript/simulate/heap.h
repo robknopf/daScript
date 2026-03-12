@@ -375,11 +375,11 @@ namespace das {
 
     struct NodePrefix {
         uint32_t    size = 0;
-#ifdef NDEBUG
+    #ifdef DAS_NO_ASSERTIONS
         uint32_t    magic;
-#else
+    #else
         uint32_t    magic = 0xdeadc0de;
-#endif
+    #endif
         uint32_t    padd0, padd1;
         NodePrefix ( size_t sz ) : size(uint32_t(sz)) {}
     };
