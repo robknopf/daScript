@@ -770,7 +770,7 @@ extern "C" {
         }
     }
 #else
-    void create_shared_library ( const char * , const char * , const char *, const char * ) { }
+    void create_shared_library ( const char * , const char * , const char *, const char *, bool ) { }
 #endif
 
     void jit_set_jit_state(Context & context, void *shared_lib, void *llvm_ee, void *llvm_context) {
