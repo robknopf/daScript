@@ -3383,7 +3383,7 @@ namespace das
 #endif
         if ( !folding ) {
             if ( !aot_hint ) {
-                context.relocateCode();
+                context.relocateCode(true);
             }
         }
         context.restart();
@@ -3437,7 +3437,7 @@ namespace das
         if ( aot_hint ) {
             linkCppAot(context, getGlobalAotLibrary(), logs);
             context.relocateCode(true);
-            context.relocateCode();
+            context.relocateCode(true);
         }
         // build init functions
         vector<SimFunction *> allInitFunctions;
